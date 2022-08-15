@@ -12,8 +12,4 @@ for j in rem:
         remdict[j] += 1
     else:
         remdict.update({j:1})
-cnt = 0
-for k in remdict:
-    cnt += 1
-    
-print(cnt)
+print(len(remdict))
