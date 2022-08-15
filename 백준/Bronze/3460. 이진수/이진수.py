@@ -4,8 +4,9 @@ for tc in range(T):
     ans = list()
     cnt = 0
 
-    while num>0:
-
+    while True:
+        if num <= 0:
+            break
         if num % 2 == 1:
             ans.append(cnt)
 
