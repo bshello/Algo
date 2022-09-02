@@ -1,9 +1,10 @@
-start, end = map(int, input().split())
-num = list()
-for i in range(1001):
+s, e = map(int, input().split())
+temp = []
+for i in range(1, (e//2)+2):
     for j in range(i):
-        num.append(i)
-s = 0
-for k in range(start-1, end):
-    s += num[k]
-print(s)
+        temp.append(i)
+se = 0
+for i in range(s-1, e):
+    se += temp[i]
+
+print(se)
