@@ -1,8 +1,7 @@
 n, m = map(int, input().split())
 arr = list(map(int, input().split()))
-arr.sort()
 s = 1
-e = arr[-1]
+e = max(arr)
 ans = 0
 while s <= e:
     tmp = 0
