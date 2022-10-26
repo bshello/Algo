@@ -1,17 +1,13 @@
-def dfs(N, M):
-    global num
-    tmp = num.copy()
-    if len(num) == M:
-
-        print(*num)
+def solve(depth):
+    if depth == n:
+        print(*arr)
         return
-
-    for i in range(1, N + 1):
-        num.append(i)
-        dfs(N, M)
-        num.pop()
+    for i in range(m):
+        arr[depth] = i + 1
+        solve(depth + 1)
 
 
-N, M = map(int, input().split())
-num = []
-dfs(N, M)
+m, n = map(int, input().split())
+arr = [0] * n
+
+solve(0)
