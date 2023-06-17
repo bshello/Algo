@@ -9,7 +9,7 @@ def find(c):
 
     p = find(parent[c])
     parent[c] = p
-    return find(parent[c])
+    return p
 
 def union(x, y):
 
