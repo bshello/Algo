@@ -7,9 +7,8 @@ def find(c):
     if c == parent[c]: #루트노드 출력, 부모찾기
         return c
 
-    p = find(parent[c])
-    parent[c] = p
-    return p
+    parent[c] = find(parent[c])
+    return parent[c]
 
 def union(x, y):
 
