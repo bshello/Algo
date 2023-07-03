@@ -1,11 +1,20 @@
-N = int(input())
-meet = [list(map(int, input().split())) for _ in range(N)]
-meet.sort(key=lambda x:(x[1], x[0]))
-ans = 0
-end = 0
+import sys
 
-for i in range(N):
-    if meet[i][0] >= end:
+input = sys.stdin.readline
+N = int(input())
+
+meetings = []
+for _ in range(N):
+    start, end = map(int, input().split())
+    meetings.append((end, start))
+
+meetings.sort(key=lambda x: (x[0], x[1]))
+
+end_time = 0
+ans = 0
+for meeting in meetings:
+
+    if meeting[1] >= end_time:
+        end_time = meeting[0]
         ans += 1
-        end = meet[i][1]
 print(ans)
